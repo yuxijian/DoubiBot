@@ -44,10 +44,10 @@ bool WeatherClient::sendRequest(const char* host, const char* cityid, const char
 	client.print(String("GET ") + GetUrl + " HTTP/1.1\r\n" +
 		"Host: " + host + "\r\n" +
 		"Connection: close\r\n\r\n");
-	Serial.println("create a request:");
+	/*Serial.println("create a request:");
 	Serial.println(String("GET ") + GetUrl + " HTTP/1.1\r\n" +
 		"Host: " + host + "\r\n" +
-		"Connection: close\r\n");
+		"Connection: close\r\n");*/
 	delay(1000);
 	return true;
 }
@@ -73,10 +73,10 @@ void WeatherClient::readReponseContent(char* content, size_t maxSize)
 {
 	size_t length = client.readBytes(content, maxSize);
 	delay(100);
-	Serial.println("Get the data from Internet!");
+	//Serial.println("Get the data from Internet!");
 	content[length] = 0;
-	Serial.println(content);
-	Serial.println("Read data Over!");
+	//Serial.println(content);
+	//Serial.println("Read data Over!");
 	client.flush();//这句代码需要加上  不然会发现每隔一次client.find会失败
 }
 

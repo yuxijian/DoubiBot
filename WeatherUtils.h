@@ -2,13 +2,7 @@
 
 #include <ESP8266WiFi.h>
 #include <ArduinoJson.h>
-
-enum FbStatus
-{
-	ERROR_SENSOR_NOT_FOUND = -2,
-	SUCCESS = 0,
-	ERROR_NO_FINGER = -1
-};
+ 
 
 const unsigned long HTTP_TIMEOUT = 5000;               // max respone time from server
 const size_t MAX_CONTENT_SIZE = 1000;                   // max size of the HTTP response

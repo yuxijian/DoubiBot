@@ -22,6 +22,11 @@ public:
 	void UpdateTime(TimeData& data);
 
 private:
+	long t = -600000;
+	long last_sec = 0;
+
+	long interval = 600000; // 10min
+
 	const long utcOffsetInSeconds = 28800;
 
 	WiFiUDP ntpUDP;

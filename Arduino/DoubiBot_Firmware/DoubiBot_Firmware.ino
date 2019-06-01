@@ -6,8 +6,8 @@
 //#define DRAW_TIME
 
 
-const char* SSID = "MiWiFi";				// 要连接的WiFi的名称
-const char* PASSWORD = "299792458Passwd";		// 要连接的WiFi的密码
+const char* SSID = "***";				// 要连接的WiFi的名称
+const char* PASSWORD = "***";		// 要连接的WiFi的密码
 const char* CITY = "shanghai";
 
 Control control(12, 5, 14);
@@ -21,7 +21,7 @@ WeatherData weatherData;
 void setup()
 {
 	// uncommet this to do calibration, code will be blocked here
-	//control.Calibrate();
+	control.Calibrate();
 
 	Serial.begin(115200);
 
